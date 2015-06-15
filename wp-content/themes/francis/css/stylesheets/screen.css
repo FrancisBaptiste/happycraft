@@ -1,0 +1,316 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* header styles */
+/* line 11, ../sass/screen.scss */
+#logo {
+  position: absolute;
+  z-index: 999;
+}
+
+/* homepage styles */
+/* main type style VARIABLES */
+/* the basic general style for the cover page. Full width images floated left. */
+/* line 41, ../sass/screen.scss */
+.coverStyle, .halfScreen, .threeScreen {
+  background-size: cover;
+  background-position: center center;
+  float: left;
+}
+
+/* line 46, ../sass/screen.scss */
+.absoluteLayer, .halfTint, .halfBorder, .halfTextBackground, .halfText, .threeTint, .threeTextBackground, #heroWrap #heroTint, #heroWrap #heroTitle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 52, ../sass/screen.scss */
+.halfScreen {
+  width: 50%;
+  padding-bottom: 35%;
+  position: relative;
+}
+
+/* line 58, ../sass/screen.scss */
+.halfScreen:nth-child(1) {
+  border-right: 1px solid #92571f;
+  border-bottom: 1px solid #92571f;
+}
+
+/* line 62, ../sass/screen.scss */
+.halfScreen:nth-child(2) {
+  border-bottom: 1px solid #92571f;
+}
+
+/* line 65, ../sass/screen.scss */
+.threeScreen:nth-child(3), .threeScreen:nth-child(4), .threeScreen:nth-child(5) {
+  border-right: 1px solid #92571f;
+}
+
+/* line 69, ../sass/screen.scss */
+.halfTint {
+  background-color: black;
+  opacity: 0.5;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+}
+
+/* line 75, ../sass/screen.scss */
+.halfBorder {
+  background: url(../../images/borderLines.png) no-repeat center center;
+}
+
+/* line 79, ../sass/screen.scss */
+.halfTextBackground {
+  background: url(../../images/fullBorder.png) no-repeat center center;
+  opacity: 0;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+}
+
+/* line 85, ../sass/screen.scss */
+.halfText {
+  text-align: center;
+  padding-top: 28%;
+}
+/* line 89, ../sass/screen.scss */
+.halfText h2 {
+  font-size: 3em;
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+/* line 95, ../sass/screen.scss */
+.halfText h3 {
+  font-size: 1.2em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+}
+
+/* line 103, ../sass/screen.scss */
+.threeScreen {
+  width: 33.33333%;
+  padding-bottom: 10%;
+  position: relative;
+}
+
+/* line 109, ../sass/screen.scss */
+.threeTint {
+  background-color: black;
+  opacity: 0.5;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+}
+
+/* line 115, ../sass/screen.scss */
+.threeTextBackground {
+  background-color: white;
+  opacity: 0;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+}
+
+/* line 122, ../sass/screen.scss */
+.threeText {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 999;
+  padding-top: 120px;
+}
+/* line 128, ../sass/screen.scss */
+.threeText h2 {
+  font-size: 2.5em;
+}
+/* line 131, ../sass/screen.scss */
+.threeText h3 {
+  font-size: 1.5em;
+}
+
+/* line 136, ../sass/screen.scss */
+.halfText a, .threeText a {
+  text-decoration: none;
+  color: #FFF;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+}
+
+/* line 143, ../sass/screen.scss */
+#newsletterWrapper {
+  background-color: #512e0c;
+  height: 280px;
+  padding-top: 70px;
+  clear: both;
+}
+/* line 148, ../sass/screen.scss */
+#newsletterWrapper p {
+  text-align: center;
+  color: #e6ab0d;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 20px;
+}
+/* line 154, ../sass/screen.scss */
+#newsletterWrapper input {
+  padding: 15px;
+  border: none;
+  width: 300px;
+  height: 50px;
+}
+/* line 160, ../sass/screen.scss */
+#newsletterWrapper #inputNewsletter {
+  max-width: 400px;
+  margin: 0 auto;
+}
+/* line 164, ../sass/screen.scss */
+#newsletterWrapper #newsletterBtn {
+  width: 100px;
+  background: #e6ab0d;
+  color: white;
+  padding: 17px 0;
+  float: right;
+  margin: 0;
+  line-height: 1;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  height: 50px;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+  cursor: pointer;
+  border: 1px solid #e6ab0d;
+}
+/* line 179, ../sass/screen.scss */
+#newsletterWrapper #newsletterBtn:hover {
+  background: #000;
+  color: #e6ab0d;
+}
+
+/* single page styles */
+/* line 188, ../sass/screen.scss */
+#heroWrap {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: none;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+/* line 197, ../sass/screen.scss */
+#heroWrap #heroTint {
+  background: url(../../images/tint4.png);
+}
+/* line 203, ../sass/screen.scss */
+#heroWrap #heroTitle h1 {
+  font-size: 4em;
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  padding-bottom: 20px;
+  padding-top: 125px;
+}
+/* line 210, ../sass/screen.scss */
+#heroWrap #heroTitle h2 {
+  font-size: 2em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+}
+
+/* line 218, ../sass/screen.scss */
+#articleBody {
+  max-width: 800px;
+  font-family: "Raleway", sans-serif;
+  margin: 0 auto;
+  font-size: 1.2em;
+  line-height: 1.9em;
+  margin-top: 50px;
+  color: #512e0c;
+}
+/* line 226, ../sass/screen.scss */
+#articleBody p:first-child:first-of-type:first-letter {
+  float: left;
+  display: block;
+  font-size: 8em;
+  line-height: 0.5em;
+  margin-right: 10px;
+  color: #bc2f04;
+  font-family: "Bree Serif", serif;
+}

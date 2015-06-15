@@ -1,0 +1,235 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+
+/* header styles */
+
+#logo{
+	position: absolute;
+	z-index: 999;
+}
+
+
+/* homepage styles */
+
+@mixin transition($time){
+	-webkit-transition: all $time;
+	-moz-transition: all $time;
+	-ms-transition: all $time;
+	transition: all $time;
+}
+
+/* main type style VARIABLES */
+$linkColor: #FFF;
+$darkBrown: #512e0c;
+$borderColor: #92571f;
+$amber: #bc2f04;
+$logoColor: #e6ab0d;
+$headerFont: 'Bree Serif', serif;
+$dateFont: 'Raleway', sans-serif;
+$bodyFont: 'Raleway', sans-serif;
+$normalWeight: 400;
+$lightWeight: 300;
+
+
+
+/* the basic general style for the cover page. Full width images floated left. */
+.coverStyle{
+	background-size: cover;
+	background-position: center center;
+	float:left;
+}
+.absoluteLayer{
+	position:absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.halfScreen{
+	@extend .coverStyle;
+	width: 50%;
+	padding-bottom: 35%;
+	position:relative;
+}
+.halfScreen:nth-child(1){
+	border-right: 1px solid $borderColor;
+	border-bottom: 1px solid $borderColor;
+}
+.halfScreen:nth-child(2){
+	border-bottom: 1px solid $borderColor;
+}
+.threeScreen:nth-child(3), .threeScreen:nth-child(4), .threeScreen:nth-child(5){
+	border-right: 1px solid $borderColor;
+}
+
+.halfTint{
+	@extend .absoluteLayer;
+	background-color: black;
+	opacity: 0.5;
+	@include transition(500ms);
+}
+.halfBorder{
+	@extend .absoluteLayer;
+	background: url(../../images/borderLines.png) no-repeat center center;
+}
+.halfTextBackground{
+	@extend .absoluteLayer;
+	background: url(../../images/fullBorder.png) no-repeat center center;
+	opacity:0;
+	@include transition(500ms);
+}
+.halfText{
+	@extend .absoluteLayer;
+	text-align: center;
+	padding-top: 28%;
+	h2{
+		font-size: 3em;
+		font-family: $headerFont;
+		font-weight: $normalWeight;
+		padding-bottom: 20px;
+	}
+	h3{
+		font-size: 1.2em;
+		font-family: $dateFont;
+		font-weight: $lightWeight;
+	}
+}
+
+
+.threeScreen{
+	@extend .coverStyle;
+	width: 33.33333%;
+	padding-bottom: 10%;
+	position: relative;
+}
+.threeTint{
+	@extend .absoluteLayer;
+	background-color: black;
+	opacity: 0.5;
+	@include transition(500ms);
+}
+.threeTextBackground{
+	@extend .absoluteLayer;
+	background-color:white;
+	opacity:0;
+	@include transition(500ms);
+}
+
+.threeText{
+	width: 100%;
+	text-align: center;
+	position:relative;
+	z-index: 999;
+	padding-top: 120px;
+	h2{
+		font-size: 2.5em;
+	}
+	h3{
+		font-size: 1.5em;
+	}
+}
+
+.halfText a, .threeText a{
+	text-decoration: none;
+	color: $linkColor;
+	@include transition(500ms);
+}
+
+
+#newsletterWrapper{
+	background-color: $darkBrown;
+	height: 280px;
+	padding-top: 70px;
+	clear:both;
+	p {
+		text-align: center;
+		color: $logoColor;
+		font-family: $bodyFont;
+		margin-bottom: 20px;
+	}
+	input{
+		padding: 15px;
+		border: none;
+		width: 300px;
+		height: 50px;
+	}
+	#inputNewsletter{
+		max-width: 400px;
+		margin: 0 auto;
+	}
+	#newsletterBtn{
+		width: 100px;
+		background: $logoColor;
+		color:white;
+		padding: 17px 0;
+		float:right;
+		margin: 0;
+		line-height: 1;
+		font-family: $bodyFont;
+		text-align: center;
+		height: 50px;
+		@include transition(500ms);
+		cursor:pointer;
+		border: 1px solid $logoColor;
+	}
+	#newsletterBtn:hover{
+		background: #000;
+		color: $logoColor;
+	}
+}
+
+
+/* single page styles */
+
+#heroWrap{
+	width: 100%;
+	height: 400px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: none;
+	color: white;
+	text-align: center;
+	position:relative;
+	#heroTint{
+		background: url(../../images/tint4.png);
+		@extend .absoluteLayer;
+	}
+	#heroTitle{
+		@extend.absoluteLayer;
+		h1{
+			font-size: 4em;
+			font-family: $headerFont;
+			font-weight: $normalWeight;
+			padding-bottom: 20px;
+			padding-top: 125px;
+		}
+		h2{
+			font-size: 2em;
+			font-family: $dateFont;
+			font-weight: $lightWeight;
+		}
+	}
+}
+
+#articleBody{
+	max-width: 800px;
+	font-family: $bodyFont;
+	margin: 0 auto;
+	font-size: 1.2em;
+	line-height: 1.9em;
+	margin-top: 50px;
+	color: $darkBrown;
+	p:first-child:first-of-type:first-letter {
+		float:left;
+		display: block;
+		font-size: 8em;
+		line-height: 0.5em;
+		margin-right:10px;
+		color: $amber;
+		font-family: $headerFont;
+	}
+}
